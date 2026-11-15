@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Isaac Sadiq</title>
+<meta name="description" content="Demonstration projects by Isaac Sadiq covering cybersecurity awareness, academic management and digital business.">
+<meta name="author" content="Isaac Sadiq">
+<meta name="theme-color" content="#080D18">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects | Isaac Sadiq">
+<meta property="og:description" content="Demonstration projects by Isaac Sadiq covering cybersecurity awareness, academic management and digital business.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page-projects">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Isaac Sadiq, home">
+      <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="34" height="34">
+      <span>Isaac Sadiq<small>Cybersecurity Portfolio</small></span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation menu"><span></span></button>
+    <ul class="nav__list" id="nav-list">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="projects.html" aria-current="page">Projects</a></li>
+        <li><a class="nav__link" href="planner.html">Academic Planner</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Projects</p>
+    <p class="eyebrow">Projects</p>
+    <h1 id="page-title">Ideas built to <span class="text-grad">show what I can do.</span></h1>
+    <p>Three demonstration projects across cybersecurity, IT and digital business. Each one explores a real problem and the approach I would take to solve it.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem" aria-labelledby="gallery-title">
+  <div class="container">
+    <h2 id="gallery-title" class="visually-hidden">Project gallery</h2>
+
+    <div class="notice notice--info reveal" role="note" style="margin-bottom:2rem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <span><strong>Demonstration projects.</strong> These are illustrative projects created for this portfolio. They are not client work or deployed products, and the Demo and GitHub buttons are placeholders until real links are added.</span>
+    </div>
+
+    <div class="filter-bar" role="group" aria-label="Filter projects by category">
+      <button class="chip" type="button" data-project-filter="all" aria-pressed="true">All projects</button>
+      <button class="chip" type="button" data-project-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
+      <button class="chip" type="button" data-project-filter="it" aria-pressed="false">IT</button>
+      <button class="chip" type="button" data-project-filter="business" aria-pressed="false">Digital Business</button>
+    </div>
+    <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+
+    <div class="grid" id="project-grid">
+
+      <!-- Project 1 (featured) -->
+      <article class="card project-card featured-project reveal" data-category="cybersecurity" data-title="CyberShield Awareness Platform">
+        <div class="project-card__media">
+          <img src="assets/images/project-cybershield.svg" alt="Preview of the CyberShield Awareness Platform with a phishing email exercise and awareness score" width="800" height="500" loading="lazy">
+          <span class="project-card__badge">Cybersecurity &middot; Demonstration</span>
+        </div>
+        <div class="project-card__body">
+          <h3>CyberShield Awareness Platform</h3>
+          <p>A cybersecurity awareness platform designed to educate everyday users about phishing, online fraud, password safety and digital security through short lessons and interactive exercises.</p>
+          <ul class="check-list">
+            <li>Phishing spotting exercises with example emails</li>
+            <li>Password safety tips and a strength checklist</li>
+            <li>Plain-language fraud and scam awareness guides</li>
+            <li>Progress-style awareness score (illustrative)</li>
+          </ul>
+          <ul class="tag-list" aria-label="Technologies used"><li class="tag tag--accent">HTML5</li><li class="tag tag--accent">CSS3</li><li class="tag tag--accent">JavaScript</li><li class="tag">SVG</li></ul>
+          <div class="project-card__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-open-detail>View details</button>
+            <button class="btn btn--ghost btn--sm" type="button" data-demo><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg> Demo (placeholder)</button>
+            <button class="btn btn--ghost btn--sm" type="button" data-repo=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.7s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.8 2.8 5.6 3.1 5.6 3.1a5 5 0 0 0-.1 3.7A5.4 5.4 0 0 0 4 10.5c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg> GitHub (placeholder)</button>
+          </div>
+        </div>
+        <div class="project-detail" hidden>
+          <img src="assets/images/project-cybershield.svg" alt="Preview of the CyberShield Awareness Platform" width="800" height="500">
+          <p class="notice" style="margin-bottom:1rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg><span>Illustrative demonstration project, not a deployed product.</span></p>
+          <h3>Overview</h3>
+          <p class="muted">Many people fall for scams not because they are careless, but because nobody showed them what a scam looks like. CyberShield is a concept for a friendly learning space that turns phishing, fraud and password safety into short, practical lessons.</p>
+          <h3>Planned features</h3>
+          <ul class="check-list">
+            <li>Interactive "spot the phish" exercises using fictional emails</li>
+            <li>Password safety guide with a simple strength checklist</li>
+            <li>Online fraud and social engineering awareness cards</li>
+            <li>Quick quizzes that reinforce each lesson</li>
+            <li>Illustrative awareness score to motivate learners</li>
+          </ul>
+          <h3>Technologies</h3>
+          <ul class="tag-list"><li class="tag tag--accent">HTML5</li><li class="tag tag--accent">CSS3</li><li class="tag tag--accent">JavaScript</li><li class="tag">SVG graphics</li><li class="tag">localStorage</li></ul>
+          <h3>What it demonstrates</h3>
+          <p class="muted">Applying cybersecurity fundamentals to user education, plus interface design, interactivity and clear writing.</p>
+        </div>
+      </article>
+
+      <div class="grid grid-2" style="grid-column:1/-1">
+        <!-- Project 2 -->
+        <article class="card project-card reveal" data-category="it" data-title="Student Academic Management System">
+          <div class="project-card__media">
+            <img src="assets/images/project-academic.svg" alt="Preview of the Student Academic Management System dashboard with statistics and a chart" width="800" height="500" loading="lazy">
+            <span class="project-card__badge">IT &middot; Demonstration</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Student Academic Management System</h3>
+            <p>A web-based academic management platform designed to organise student information, academic activities and administrative processes in one clear dashboard.</p>
+            <ul class="check-list">
+              <li>Dashboard with course and task summaries</li>
+              <li>Schedule and activity tracking</li>
+              <li>Organised student record views</li>
+            </ul>
+            <ul class="tag-list" aria-label="Technologies used"><li class="tag tag--accent">HTML5</li><li class="tag tag--accent">CSS Grid</li><li class="tag tag--accent">JavaScript</li><li class="tag">localStorage</li></ul>
+            <div class="project-card__actions">
+              <button class="btn btn--primary btn--sm" type="button" data-open-detail>View details</button>
+              <button class="btn btn--ghost btn--sm" type="button" data-demo><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg> Demo (placeholder)</button>
+              <button class="btn btn--ghost btn--sm" type="button" data-repo=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.7s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.8 2.8 5.6 3.1 5.6 3.1a5 5 0 0 0-.1 3.7A5.4 5.4 0 0 0 4 10.5c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg> GitHub (placeholder)</button>
+            </div>
+          </div>
+          <div class="project-detail" hidden>
+            <img src="assets/images/project-academic.svg" alt="Preview of the Student Academic Management System" width="800" height="500">
+            <p class="notice" style="margin-bottom:1rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg><span>Illustrative demonstration project, not a deployed product.</span></p>
+            <h3>Overview</h3>
+            <p class="muted">Students juggle lectures, assignments, exams and administration across scattered notes and messages. This concept brings everything into one organised system that makes the academic week easier to see and manage.</p>
+            <h3>Planned features</h3>
+            <ul class="check-list">
+              <li>Overview dashboard with active courses, due tasks and progress</li>
+              <li>Task and activity tracking by category and priority</li>
+              <li>Schedule view for lectures and deadlines</li>
+              <li>Structured student information records</li>
+              <li>Data kept in the browser for a no-backend demo</li>
+            </ul>
+            <h3>Technologies</h3>
+            <ul class="tag-list"><li class="tag tag--accent">HTML5</li><li class="tag tag--accent">CSS Grid &amp; Flexbox</li><li class="tag tag--accent">JavaScript</li><li class="tag">localStorage</li></ul>
+            <h3>Try a working piece</h3>
+            <p class="muted">The task-tracking part of this idea is working on the <a href="planner.html">Academic Planner</a> page.</p>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project-card reveal" data-category="business" data-title="Digital Business Portfolio" style="--delay:100ms">
+          <div class="project-card__media">
+            <img src="assets/images/project-business.svg" alt="Preview of the Digital Business Portfolio website showing services and brand sections" width="800" height="500" loading="lazy">
+            <span class="project-card__badge">Digital Business &middot; Demonstration</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Digital Business Portfolio</h3>
+            <p>A professional digital business portfolio designed to showcase services, brand identity, business solutions and online presence for a small business.</p>
+            <ul class="check-list">
+              <li>Clear service and solution sections</li>
+              <li>Consistent brand identity and visuals</li>
+              <li>Content planning for social presence</li>
+            </ul>
+            <ul class="tag-list" aria-label="Technologies and skills"><li class="tag tag--accent">Graphic Design</li><li class="tag tag--accent">Branding</li><li class="tag tag--accent">Content</li><li class="tag">HTML &amp; CSS</li></ul>
+            <div class="project-card__actions">
+              <button class="btn btn--primary btn--sm" type="button" data-open-detail>View details</button>
+              <button class="btn btn--ghost btn--sm" type="button" data-demo><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg> Demo (placeholder)</button>
+              <button class="btn btn--ghost btn--sm" type="button" data-repo=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.7s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.8 2.8 5.6 3.1 5.6 3.1a5 5 0 0 0-.1 3.7A5.4 5.4 0 0 0 4 10.5c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg> GitHub (placeholder)</button>
+            </div>
+          </div>
+          <div class="project-detail" hidden>
+            <img src="assets/images/project-business.svg" alt="Preview of the Digital Business Portfolio" width="800" height="500">
+            <p class="notice" style="margin-bottom:1rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg><span>Illustrative demonstration project, not a real client engagement.</span></p>
+            <h3>Overview</h3>
+            <p class="muted">Small businesses often have good services but an unclear online presence. This concept shows how design, content and simple web technology can present a business professionally and consistently.</p>
+            <h3>Planned features</h3>
+            <ul class="check-list">
+              <li>Services and solutions presented in clear, scannable sections</li>
+              <li>Brand identity: colour, type and logo direction</li>
+              <li>Social media content plan and sample post designs</li>
+              <li>Short promotional video concept</li>
+              <li>Contact and enquiry call-to-action</li>
+            </ul>
+            <h3>Skills used</h3>
+            <ul class="tag-list"><li class="tag tag--accent">Graphic Design</li><li class="tag tag--accent">Content Creation</li><li class="tag tag--accent">Social Media</li><li class="tag">HTML &amp; CSS</li></ul>
+            <h3>What it demonstrates</h3>
+            <p class="muted">The creative and digital business side of my profile, and how it supports my consulting aspirations.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="muted" id="no-projects" hidden style="text-align:center; margin-top:2rem">No projects in this category yet.</p>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="compare-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">At a glance</p>
+      <h2 id="compare-title">Project comparison.</h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="data">
+        <caption>Demonstration projects summary<small>All entries are portfolio demonstrations, not client or commercial work.</small></caption>
+        <thead>
+          <tr><th scope="col">Project</th><th scope="col">Category</th><th scope="col">Main technologies / skills</th><th scope="col">Focus</th><th scope="col">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">CyberShield Awareness Platform</th><td>Cybersecurity</td><td>HTML5, CSS3, JavaScript, SVG</td><td>User security education</td><td>Demonstration</td></tr>
+          <tr><th scope="row">Student Academic Management System</th><td>IT</td><td>HTML5, CSS Grid, JavaScript, localStorage</td><td>Organising academic life</td><td>Demonstration</td></tr>
+          <tr><th scope="row">Digital Business Portfolio</th><td>Digital Business</td><td>Graphic design, branding, content, HTML &amp; CSS</td><td>Brand and online presence</td><td>Demonstration</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="process-title">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">My process</p>
+      <h2 id="process-title">How I approach a project.</h2>
+      <p class="muted">A simple, repeatable workflow keeps my work organised and my results consistent.</p>
+    </div>
+    <ol class="check-list reveal" style="--delay:120ms; list-style:none">
+      <li><strong>Understand</strong>: define the problem and who it is for.</li>
+      <li><strong>Plan</strong>: sketch structure, content and visual direction.</li>
+      <li><strong>Build</strong>: use semantic HTML, clean CSS and readable JavaScript.</li>
+      <li><strong>Test</strong>: check different screen sizes, inputs and edge cases.</li>
+      <li><strong>Refine</strong>: improve, document and share the result.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Have an idea to build?</h2>
+        <p>I enjoy learning by building. Tell me about a project, collaboration or question.</p>
+      </div>
+      <a class="btn btn--primary" href="contact.html">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<dialog class="modal" id="project-dialog" aria-labelledby="dialog-title">
+  <div class="modal__head">
+    <h2 id="dialog-title">Project details</h2>
+    <button class="icon-btn" type="button" data-close aria-label="Close project details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="modal__body" id="dialog-body"></div>
+</dialog>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Isaac Sadiq, home">
+          <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="34" height="34">
+          <span>Isaac Sadiq<small>Cybersecurity Portfolio</small></span>
+        </a>
+        <p>B.Sc. Cybersecurity student at MIVA Open University, building toward a career in cybersecurity analysis and digital business consulting.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="mailto:I.sadiq0335@miva.edu.ng">I.sadiq0335@miva.edu.ng</a></li>
+          <li><a href="mailto:sadiqohinoyiisaac@gmail.com">sadiqohinoyiisaac@gmail.com</a></li>
+          <li><a href="tel:+2349064558356">09064558356</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Isaac Sadiq. Academic portfolio project for MIVA Open University.</span>
+      <span>Built with HTML5, CSS3 and vanilla JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+<button class="back-to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

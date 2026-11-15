@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Preview of the Student Academic Management System demonstration">
+<defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+<rect width="800" height="500" fill="#0B1222"/>
+<rect x="24" y="24" width="752" height="452" rx="12" fill="#101827" stroke="#223049"/>
+<rect x="24" y="24" width="150" height="452" rx="12" fill="#172033"/>
+<rect x="44" y="48" width="28" height="28" rx="8" fill="url(#a)"/><text x="82" y="68" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Campus</text>
+<rect x="44" y="110" width="110" height="28" rx="6" fill="#223049"/><text x="56" y="129" font-family="Arial,sans-serif" font-size="12" fill="#F8FAFC">Dashboard</text>
+<text x="56" y="167" font-family="Arial,sans-serif" font-size="12" fill="#94A3B8">Courses</text>
+<text x="56" y="197" font-family="Arial,sans-serif" font-size="12" fill="#94A3B8">Schedule</text>
+<text x="56" y="227" font-family="Arial,sans-serif" font-size="12" fill="#94A3B8">Records</text>
+<text x="204" y="68" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Student overview</text>
+<g font-family="Arial,sans-serif"><rect x="204" y="90" width="170" height="80" rx="10" fill="#172033" stroke="#223049"/><text x="220" y="118" font-size="11" fill="#94A3B8">Active courses</text><text x="220" y="152" font-size="28" font-weight="700" fill="#F8FAFC">6</text>
+<rect x="388" y="90" width="170" height="80" rx="10" fill="#172033" stroke="#223049"/><text x="404" y="118" font-size="11" fill="#94A3B8">Tasks due</text><text x="404" y="152" font-size="28" font-weight="700" fill="#06B6D4">4</text>
+<rect x="572" y="90" width="180" height="80" rx="10" fill="#172033" stroke="#223049"/><text x="588" y="118" font-size="11" fill="#94A3B8">Progress</text><text x="588" y="152" font-size="28" font-weight="700" fill="#3B82F6">72%</text></g>
+<rect x="204" y="196" width="548" height="150" rx="10" fill="#172033" stroke="#223049"/>
+<g stroke="#223049"><line x1="224" y1="316" x2="732" y2="316"/><line x1="224" y1="276" x2="732" y2="276"/><line x1="224" y1="236" x2="732" y2="236"/></g>
+<g fill="url(#a)"><rect x="244" y="270" width="36" height="46" rx="4"/><rect x="304" y="246" width="36" height="70" rx="4"/><rect x="364" y="258" width="36" height="58" rx="4"/><rect x="424" y="226" width="36" height="90" rx="4"/><rect x="484" y="250" width="36" height="66" rx="4"/><rect x="544" y="236" width="36" height="80" rx="4"/><rect x="604" y="262" width="36" height="54" rx="4"/><rect x="664" y="230" width="36" height="86" rx="4"/></g>
+<rect x="204" y="364" width="548" height="90" rx="10" fill="#172033" stroke="#223049"/>
+<rect x="224" y="384" width="200" height="10" rx="5" fill="#334155"/><rect x="224" y="406" width="320" height="8" rx="4" fill="#223049"/><rect x="224" y="426" width="260" height="8" rx="4" fill="#223049"/>
+<text x="600" y="400" font-family="Arial,sans-serif" font-size="11" fill="#64748B">Demonstration graphic</text>
+</svg>

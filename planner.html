@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academic Planner | Isaac Sadiq</title>
+<meta name="description" content="A working academic planner: add, edit, filter, search and track tasks with progress statistics saved in your browser.">
+<meta name="author" content="Isaac Sadiq">
+<meta name="theme-color" content="#080D18">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Academic Planner | Isaac Sadiq">
+<meta property="og:description" content="A working academic planner: add, edit, filter, search and track tasks with progress statistics saved in your browser.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page-planner">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Isaac Sadiq, home">
+      <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="34" height="34">
+      <span>Isaac Sadiq<small>Cybersecurity Portfolio</small></span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation menu"><span></span></button>
+    <ul class="nav__list" id="nav-list">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="projects.html">Projects</a></li>
+        <li><a class="nav__link" href="planner.html" aria-current="page">Academic Planner</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Academic Planner</p>
+    <p class="eyebrow">Academic Planner</p>
+    <h1 id="page-title">Plan the week. <span class="text-grad">Track the progress.</span></h1>
+    <p>A working task manager for assignments, exams, lectures and projects. Everything you add is saved in this browser.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem" aria-label="Academic planner application">
+  <div class="container">
+
+    <div class="notice notice--info" role="note" style="margin-bottom:1.5rem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <span>Tasks are stored in your browser with <code>localStorage</code>, so they stay after a refresh but are not shared across devices. Tasks marked <strong>Sample</strong> are demonstration data and can be removed at any time.</span>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="planner-stats" role="group" aria-label="Task statistics">
+      <div class="planner-stat"><span>Total tasks</span><strong id="stat-total">0</strong></div>
+      <div class="planner-stat planner-stat--ok"><span>Completed</span><strong id="stat-completed">0</strong></div>
+      <div class="planner-stat planner-stat--warn"><span>Pending</span><strong id="stat-pending">0</strong></div>
+      <div class="planner-stat planner-stat--accent"><span>Completion</span><strong id="stat-percent">0%</strong></div>
+    </div>
+
+    <div class="progress-panel">
+      <div class="progress-panel__top"><span id="progress-label">Overall progress</span><span id="progress-text">0%</span></div>
+      <div class="progress" role="progressbar" aria-labelledby="progress-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="planner-layout">
+
+      <!-- Add / edit form -->
+      <aside class="planner-form-panel" aria-label="Task form">
+        <form class="panel" id="task-form" novalidate>
+          <h2 id="form-title">Add a task</h2>
+          <input type="hidden" id="task-id" value="">
+
+          <div class="field" id="field-title">
+            <label for="task-title">Title <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="text" id="task-title" name="title" maxlength="80" placeholder="e.g. Submit networking assignment" autocomplete="off" aria-describedby="task-title-error" required>
+            <p class="field__error" id="task-title-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="task-desc">Description</label>
+            <textarea class="textarea" id="task-desc" name="description" maxlength="300" placeholder="Optional notes or details"></textarea>
+          </div>
+
+          <div class="field-row">
+            <div class="field" id="field-due">
+              <label for="task-due">Due date <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" type="date" id="task-due" name="due" aria-describedby="task-due-error" required>
+              <p class="field__error" id="task-due-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="task-category">Category</label>
+              <select class="select" id="task-category" name="category">
+                <option>Assignments</option>
+                <option>Examinations</option>
+                <option>Lectures</option>
+                <option>Projects</option>
+                <option>Personal Activities</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="task-priority">Priority</label>
+              <select class="select" id="task-priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="task-status">Status</label>
+              <select class="select" id="task-status" name="status">
+                <option value="pending" selected>Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" id="task-submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg> <span id="task-submit-label">Add task</span></button>
+            <button class="btn btn--ghost" type="button" id="task-cancel" hidden>Cancel edit</button>
+            <button class="btn btn--ghost" type="reset" id="task-reset">Clear</button>
+          </div>
+        </form>
+      </aside>
+
+      <!-- Task list -->
+      <section class="panel" aria-labelledby="list-title">
+        <h2 id="list-title">Your tasks <span class="muted" id="result-count" style="font-size:.85rem; font-weight:400"></span></h2>
+
+        <div class="notice sample-banner" id="sample-banner" hidden>
+          <span style="display:flex; gap:.8rem; align-items:flex-start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>Some tasks here are <strong>sample demonstration tasks</strong> to show how the planner works.</span></span>
+          <button class="btn btn--ghost btn--sm" type="button" id="remove-samples">Remove sample tasks</button>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <label for="task-search" class="visually-hidden">Search tasks</label>
+            <input class="input" type="search" id="task-search" placeholder="Search by title, description or category" autocomplete="off">
+          </div>
+          <div class="sort-box">
+            <label for="task-sort">Sort by</label>
+            <select class="select" id="task-sort">
+              <option value="due-asc">Due date (soonest)</option>
+              <option value="due-desc">Due date (latest)</option>
+              <option value="priority">Priority (high first)</option>
+              <option value="newest">Recently added</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="pending" aria-pressed="false">Pending</button>
+          <button class="chip" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+          <button class="chip" type="button" data-filter="high" aria-pressed="false">High priority</button>
+        </div>
+
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+          <h3 id="empty-title">No tasks yet</h3>
+          <p id="empty-text">Add your first task using the form to start planning.</p>
+          <div class="flex" style="justify-content:center; margin-top:1.25rem">
+            <button class="btn btn--ghost btn--sm" type="button" id="load-samples">Load sample tasks</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<dialog class="modal" id="confirm-dialog" aria-labelledby="confirm-title" style="width:min(92vw,440px)">
+  <div class="modal__head"><h2 id="confirm-title">Delete this task?</h2></div>
+  <div class="modal__body">
+    <p class="muted" id="confirm-text">This cannot be undone.</p>
+    <div class="form-actions">
+      <button class="btn btn--ghost" type="button" id="confirm-cancel">Cancel</button>
+      <button class="btn btn--danger" type="button" id="confirm-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg> Delete task</button>
+    </div>
+  </div>
+</dialog>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Isaac Sadiq, home">
+          <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="34" height="34">
+          <span>Isaac Sadiq<small>Cybersecurity Portfolio</small></span>
+        </a>
+        <p>B.Sc. Cybersecurity student at MIVA Open University, building toward a career in cybersecurity analysis and digital business consulting.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="mailto:I.sadiq0335@miva.edu.ng">I.sadiq0335@miva.edu.ng</a></li>
+          <li><a href="mailto:sadiqohinoyiisaac@gmail.com">sadiqohinoyiisaac@gmail.com</a></li>
+          <li><a href="tel:+2349064558356">09064558356</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Isaac Sadiq. Academic portfolio project for MIVA Open University.</span>
+      <span>Built with HTML5, CSS3 and vanilla JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+<button class="back-to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="js/main.js" defer></script>
+<script src="js/planner.js" defer></script>
+</body>
+</html>
